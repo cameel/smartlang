@@ -1,0 +1,39 @@
+contract Auction (InProgress, Finished) {
+    var owner: Address
+    var participants: [Address] = []
+    var bids: [Address: Wei] = [:]
+    var winner: Address
+}
+
+Auction @(InProgress) :: caller <- (any) {
+    public init(newOwner: Address) {
+        owner = caller
+        winner = owner
+        bids[winner] = Wei(unsafeRawValue: 0)
+        become InProgress
+    }
+
+    @payable
+    public func bid(implicit value: inout Wei) mutates (bids, participants) {
+        participants[participants.size] = caller
+        bids[caller].transfer(source: &value)
+    }
+}
+
+Auction @(InProgress) :: (owner) {
+    public func finish() mutates (winner) {
+        for let participant: Address in participants {
+            if bids[participant].rawValue > bids[winner].rawValue {
+                winner = participant
+            }
+        }
+
+        become Finished
+    }
+}
+
+Auction @(Finished) :: (owner) {
+    public func winningBid() -> Int {
+        return bids[winner].rawValue;
+    }
+}

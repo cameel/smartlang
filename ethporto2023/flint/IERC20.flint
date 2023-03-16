@@ -1,0 +1,22 @@
+external trait IERC20 {
+    func totalSupply() -> uint128
+    func balanceOf(account: address) -> uint128
+    func transfer(to: address, amount: uint256) -> bool
+    func allowance(owner: address, spender: address) -> uint256
+    func approve(spender: address, amount: uint256) -> bool
+    func transferFrom(from: address, to: address, amount: uint256) -> bool
+}
+
+contract Holder {}
+
+Holder :: caller <- (any) {
+    public init() {}
+
+    public func gimmeGold(tokenAddress: Address) -> Bool {
+        let token: IERC20 = IERC20(address: tokenAddress)
+        return (call! token.transfer(
+            to: caller as! address,
+            amount: 10 as! uint256
+        )) as! Bool
+    }
+}
