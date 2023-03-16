@@ -21,7 +21,10 @@
         - This is the time to ask questions.
 
 ## Materials
-- You can view the presentation at: https://github.com/cameel/ethporto2023/
+- You can view the presentation at: https://github.com/cameel/smartlang/ethporto2023/
+    ```bash
+    git clone https://github.com/cameel/smartlang/ethporto2023/
+    ```
 - Docker images for hands-on segments:
     ```bash
     docker pull cameel/vyper-archlinux
