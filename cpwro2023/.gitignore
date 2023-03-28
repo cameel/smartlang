@@ -1,0 +1,10 @@
+# Draw.io temporary files
+.$*.drawio.bkp
+.$*.drawio.dtmp
+
+# Auto-generated word clouds
+/zk-languages-wordcloud.png
+/other-blockchain-languages-wordcloud.png
+
+# Build directory
+/build/

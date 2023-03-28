@@ -1,0 +1,9 @@
+{
+    "controls": false,
+    "slideNumber": "c/t",
+    "transition": "slide",
+    "transitionSpeed": "fast",
+    "center": true,
+    "width": 1920,
+    "height": 1080
+}
