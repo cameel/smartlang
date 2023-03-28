@@ -239,7 +239,7 @@ impl TestContract for Contract {
 
 ## Mainstream languages: timeline
 
----
+![mainstream-timeline](mainstream-timeline.svg)
 
 ## IR/assembly languages
 - LLL/Vyper IR
@@ -462,7 +462,7 @@ func public %basic(v0.i32, v1.i32) -> void:
 
 ## IR/assembly languages: timeline
 
----
+![ir-assembly-timeline](ir-assembly-timeline.svg)
 
 ## Experimental languages: influences
 
@@ -478,7 +478,7 @@ func public %basic(v0.i32, v1.i32) -> void:
 
 ## Experimental languages: timeline
 
----
+![experimental-timeline](experimental-timeline.svg)
 
 ## Other languages
 - L2 languages
