@@ -1,0 +1,6 @@
+# Draw.io temporary files
+.$*.drawio.bkp
+.$*.drawio.dtmp
+
+# Build directory
+/build/

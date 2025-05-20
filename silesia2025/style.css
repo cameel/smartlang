@@ -1,0 +1,42 @@
+/* Styles that splits the slide into two columns. */
+.column-container {
+    display: flex;
+    height: 100%;
+}
+
+.column {
+    width: 50%;
+}
+
+/* Non-transparent card for use in r-stacks so that the previous content does not show through.
+ * Assumes a white theme. */
+.card {
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+
+/* Make the code blocks take the full height of the slide. */
+.full-page pre.code-wrapper {
+    height: 50vh;
+}
+
+.half-page pre.code-wrapper {
+    height: 20vh;
+}
+
+.quarter-page pre.code-wrapper {
+    height: 12.5vh;
+}
+
+/* Fix Python decorators and Rust attributes being highlighted as black text in Monokai. */
+.hljs-meta {
+    color: #F92672;
+}
+
+.author-info {
+    font-size: 30px;
+    text-align: right;
+    border-right: 2px solid black;
+    padding: 20px;
+}
